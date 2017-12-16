@@ -1,0 +1,78 @@
+/*===============
+ Reset CSS 
+=================*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*===============
+ Common CSS 
+=================*/
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+main > * ,header , footer {
+    color: #000;
+    margin:  4px;
+    border-radius:  5px;
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #000;
+}
+header,footer {
+    background:  darkseagreen;
+    color:  #000;
+    flex-basis: 80px;
+}
+
+/*===============
+ Header CSS 
+=================*/
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/*===============
+ Main Area CSS 
+=================*/
+main {
+    display: flex;
+    height: 100vh;
+}
+article {
+    flex-basis: 60%;
+    background: #00abff2e;
+}
+nav,aside {
+    background: #2d38287d;
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+nav {
+    order: -1;
+}
+aside {
+    background: #377775e0;
+}
+
+/*===============
+ Meadia Query CSS 
+=================*/
+@media all and (max-width: 640px){
+	main{
+		flex-direction: column;
+	}
+	nav{
+		order: 0;
+	}
+}
